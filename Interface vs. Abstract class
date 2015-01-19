@@ -1,0 +1,2 @@
+1. What is interface?
+In its most common form, an interface is a group of related methods with empty bodies.(It can contains field, but it MUST BE static final).
