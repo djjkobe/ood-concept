@@ -1,2 +1,21 @@
 1. What is interface?
 In its most common form, an interface is a group of related methods with empty bodies.(It can contains field, but it MUST BE static final).
+
+2. What is abstract class? 
+An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+
+3. Difference 
+(1)An interface is not a class. An interface is essentially a type that can be satisfied by any class that implements the interface.
+(2)Abstract classes are meant to be inherited from, and when one class inherits from another it means that there is a strong relationship between the 2 classes. With an interface on the other hand, the relationship between the interface itself and the class implementing the interface is not necessarily strong.So an abstract class would be more appropriate when there is a strong relationship between the abstract class and the classes that will derive from it. 
+(3)Java does not allow multiple inheritance. However, a class can implement multiple interfaces.
+(4)An abstract class may provide some methods with definitions – so an abstract class can have non-abstract methods with actual implementation details. An abstract class can also have constructors and instance variables as well. An interface, however, can not provide any method definitions – it can only provide method headings. Any class that implements the interface is responsible for providing the method definition/implementation.
+
+4. when to use each one
+Consider using abstract classes if any of these statements apply to your situation:
+You want to share code among several closely related classes.
+You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.
+Consider using interfaces if any of these statements apply to your situation:
+You expect that unrelated classes would implement your interface. For example, the interfaces Comparable and Cloneable are implemented by many unrelated classes.
+You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
+You want to take advantage of multiple inheritance of type.
